@@ -16,5 +16,7 @@ namespace PostgreSQL.Domain
         public bool change_user { get; set; }
         public bool read_events { get; set; }
         public bool commentder_events { get; set; }
+
+        public virtual ICollection<User> users { get; set;}
     }
 }

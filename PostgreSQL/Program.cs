@@ -20,7 +20,7 @@ namespace PostgreSQL
                 User user = new User
                 {
                     Id = 1,
-                    role_id = 1,
+                    Role = admin,
                     login = "admin",
                     password = "123",
                     email = "qw@w.e",
@@ -32,7 +32,7 @@ namespace PostgreSQL
 
 
                 foreach (var u in db.Users.ToList())
-                    Console.WriteLine($"{u.FIO}, {u.role_id}");
+                    Console.WriteLine($"{u.FIO}, {u.Role.role_id}");
 
             }
         }

@@ -11,10 +11,13 @@ namespace PostgreSQL.Domain
     {
         [Key]
         public int Id { get; set; }
-        public int role_id { get; set; }
+        //public int role_id { get; set; }
         public string login { get; set; }
         public string password { get; set; }
         public string email { get; set; }
         public string FIO { get; set; }
+
+        public virtual Role Role { get; set; }
+        public virtual ICollection<HistoryLogin> HistoryLogins { get; set; }
     }
 }
