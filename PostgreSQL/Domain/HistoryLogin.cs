@@ -12,10 +12,9 @@ namespace PostgreSQL.Domain
         [Key]
         public int Id { get; set; }
         //public int user_id { get; set; }
-        public DateTimeOffset last_login_time { get; set; }
+        public DateTimeOffset last_login_datetimeoffset { get; set; }
         public string IP { get; set; }
         public string device_settings { get; set; }
-
         public virtual User User { get; set; }
     }
 }
